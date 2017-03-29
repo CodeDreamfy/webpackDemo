@@ -1,16 +1,22 @@
 var webpack= require('webpack');
 module.exports = {
-  entry: {
-    'main1': './main1',
-    'main2': './main2'
-  },
+  entry: './main4',
   output: {
     // filename: '[name]-[chunkhash].js'
-    filename: '[name]-[hash].js'
+    filename: 'bound[hash].js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|coffee)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
+      }
+    ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'entry'
-    })
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'entry'
+    // })
   ]
 }
