@@ -60,21 +60,25 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 119);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+/******/ ({
 
-let [ms,co] = [12,15];
+/***/ 119:
+/***/ (function(module, exports, __webpack_require__) {
 
-{
-  console.log("jij")
+var mon = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../index\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+
+function index () {
+  console.log('send index')
+  mon()
 }
+index()
 
 /***/ })
-/******/ ]);
+
+/******/ });
